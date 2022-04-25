@@ -78,36 +78,38 @@ function! s:create_colors(palette) abort
   call extend(rules, pgmnt#hi#group(
         \ 'DiffAdd', {
         \   'cterm': 'NONE',
-        \   'ctermbg': c.green,
-        \   'ctermfg': c.black,
-        \   'guibg': g.green,
-        \   'guifg': g.black,
+        \   'ctermbg': 'NONE',
+        \   'ctermfg': c.green,
+        \   'gui': 'NONE',
+        \   'guibg': 'NONE',
+        \   'guifg': g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'DiffChange', {
         \   'cterm': 'NONE',
-        \   'ctermbg': c.yellow,
-        \   'ctermfg': c.black,
-        \   'guibg': g.yellow,
-        \   'guifg': g.black,
+        \   'ctermbg': 'NONE',
+        \   'ctermfg': 'NONE',
+        \   'gui': 'NONE',
+        \   'guibg': 'NONE',
+        \   'guifg': 'NONE',
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'DiffDelete', {
         \   'cterm': 'NONE',
-        \   'ctermbg': c.pink,
-        \   'ctermfg': c.black,
+        \   'ctermbg': 'NONE',
+        \   'ctermfg': c.pink,
         \   'gui': 'NONE',
-        \   'guibg': g.pink,
-        \   'guifg': g.black,
+        \   'guibg': 'NONE',
+        \   'guifg': g.pink,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'DiffText', {
         \   'cterm': 'NONE',
-        \   'ctermbg': c.green,
-        \   'ctermfg': c.black,
+        \   'ctermbg': 'NONE',
+        \   'ctermfg': c.blue,
         \   'gui': 'NONE',
-        \   'guibg': g.green,
-        \   'guifg': g.black,
+        \   'guibg': 'NONE',
+        \   'guifg': g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Directory', {
@@ -140,10 +142,10 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['Folded', 'FoldColumn'], {
-        \   'ctermbg': c.cyan,
-        \   'ctermfg': c.white,
-        \   'guibg': g.cyan,
-        \   'guifg': g.white,
+        \   'ctermbg': 'NONE',
+        \   'ctermfg': c.cyan,
+        \   'guibg': 'NONE',
+        \   'guifg': g.cyan,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['Function', 'Identifier'], {

@@ -1,6 +1,6 @@
 " File:       asterisk_blue.vim
 " Maintainer: vuchvu <akisamegane7100@gmail.com>
-" Modified:   2022-04-17 21:31
+" Modified:   2022-04-25 20:58
 " License:    MIT
 
 
@@ -29,10 +29,10 @@ hi lCursor ctermbg=250 ctermfg=21 guibg=#b4b4b4 guifg=#0000ff
 hi CursorIM ctermbg=250 ctermfg=21 guibg=#b4b4b4 guifg=#0000ff
 hi CursorLineNr cterm=NONE ctermbg=254 ctermfg=100 guibg=#e4e4e4 guifg=#878700
 hi Delimiter ctermfg=234 guifg=#1c1c1c
-hi DiffAdd cterm=NONE ctermbg=70 ctermfg=234 guibg=#5aaf00 guifg=#1c1c1c
-hi DiffChange cterm=NONE ctermbg=100 ctermfg=234 guibg=#878700 guifg=#1c1c1c
-hi DiffDelete cterm=NONE ctermbg=206 ctermfg=234 gui=NONE guibg=#ff5fd7 guifg=#1c1c1c
-hi DiffText cterm=NONE ctermbg=70 ctermfg=234 gui=NONE guibg=#5aaf00 guifg=#1c1c1c
+hi DiffAdd cterm=NONE ctermbg=NONE ctermfg=70 gui=NONE guibg=NONE guifg=#5aaf00
+hi DiffChange cterm=NONE ctermbg=NONE ctermfg=NONE gui=NONE guibg=NONE guifg=NONE
+hi DiffDelete cterm=NONE ctermbg=NONE ctermfg=206 gui=NONE guibg=NONE guifg=#ff5fd7
+hi DiffText cterm=NONE ctermbg=NONE ctermfg=21 gui=NONE guibg=NONE guifg=#0000ff
 hi Directory ctermfg=21 guifg=#0000ff
 hi Error ctermbg=255 ctermfg=206 guibg=#eeeeee guifg=#ff5fd7
 hi ErrorMsg ctermbg=255 ctermfg=206 guibg=#eeeeee guifg=#ff5fd7
@@ -41,8 +41,8 @@ hi EndOfBuffer ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 hi Exception ctermfg=206 guifg=#ff5fd7
 hi Float ctermfg=166 guifg=#d75f00
 hi Number ctermfg=166 guifg=#d75f00
-hi Folded ctermbg=45 ctermfg=255 guibg=#00d7ff guifg=#eeeeee
-hi FoldColumn ctermbg=45 ctermfg=255 guibg=#00d7ff guifg=#eeeeee
+hi Folded ctermbg=NONE ctermfg=45 guibg=NONE guifg=#00d7ff
+hi FoldColumn ctermbg=NONE ctermfg=45 guibg=NONE guifg=#00d7ff
 hi Function cterm=NONE ctermfg=100 guifg=#878700
 hi Identifier cterm=NONE ctermfg=100 guifg=#878700
 hi Ignore ctermbg=NONE ctermfg=250 guibg=NONE guifg=#b4b4b4
