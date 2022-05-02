@@ -1,6 +1,8 @@
 # asterisk_blue
 
-asterisk_blue is colorscheme for Vim and Neovim.
+asterisk_blue is ...
+ - colorscheme for Vim and Neovim
+ - now in progress
 
 ![screenshot](https://user-images.githubusercontent.com/77821412/163714960-7c3a297b-ee16-416c-b077-d8a100300a29.png)
 
