@@ -834,26 +834,23 @@ function! s:create_xline_context() abort
           \   c.blue,
           \   c.white,
           \ ])
+    let col_navy = string([
+          \   g.lightgray,
+          \   g.navy,
+          \   c.lightgray,
+          \   c.navy,
+          \ ])
     let prefix = bg . '_col_'
     let context = extend(context, {
           \   prefix . 'base': col_base,
-          \   prefix . 'tabfill': string([
-          \     g.white,
-          \     g.black,
-          \     c.white,
-          \     c.black,
-          \   ]),
+          \   prefix . 'tabfill': col_base,
           \   prefix . 'edge': col_edge,
+          \   prefix . 'edge_rev': col_edge_rev,
+          \   prefix . 'navy': col_navy,
           \   prefix . 'normal': col_edge_rev,
           \   prefix . 'tabsel': col_edge,
           \   prefix . 'error': col_edge_rev,
-          \   prefix . 'gradient': col_edge,
-          \   prefix . 'nc': string([
-          \     g.blue,
-          \     g.white,
-          \     c.blue,
-          \     c.white,
-          \   ]),
+          \   prefix . 'nc': col_edge_rev,
           \   prefix . 'warning': string([
           \     g.white,
           \     g.orange,

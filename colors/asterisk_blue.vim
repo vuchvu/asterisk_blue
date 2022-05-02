@@ -1,6 +1,6 @@
 " File:       asterisk_blue.vim
 " Maintainer: vuchvu <akisamegane7100@gmail.com>
-" Modified:   2022-04-25 20:58
+" Modified:   2022-05-02 10:20
 " License:    MIT
 
 

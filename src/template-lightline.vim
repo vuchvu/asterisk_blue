@@ -13,7 +13,8 @@ function! s:build_palette() abort
 
   let col_base     = {{light_col_base}}
   let col_edge     = {{light_col_edge}}
-  let col_gradient = {{light_col_gradient}}
+  let col_edge_rev = {{light_col_edge_rev}}
+  let col_navy     = {{light_col_navy}}
   let col_nc       = {{light_col_nc}}
   let col_tabfill  = {{light_col_tabfill}}
   let col_normal   = {{light_col_normal}}
@@ -28,10 +29,10 @@ function! s:build_palette() abort
         \ col_base]
   let p.normal.left = [
         \ col_normal,
-        \ col_gradient]
+        \ col_edge]
   let p.normal.right = [
-        \ col_edge,
-        \ col_gradient]
+        \ col_edge_rev,
+        \ col_edge]
   let p.normal.error = [
         \ col_error]
   let p.normal.warning = [
@@ -39,13 +40,13 @@ function! s:build_palette() abort
 
   let p.insert.left = [
         \ col_insert,
-        \ col_gradient]
+        \ col_edge]
   let p.replace.left = [
         \ col_replace,
-        \ col_gradient]
+        \ col_edge]
   let p.visual.left = [
         \ col_visual,
-        \ col_gradient]
+        \ col_edge]
 
   let p.inactive.middle = [
         \ col_nc]
@@ -59,11 +60,13 @@ function! s:build_palette() abort
   let p.tabline.middle = [
         \ col_tabfill]
   let p.tabline.left = [
-        \ col_tabfill]
+        \ col_navy]
   let p.tabline.tabsel = [
         \ col_tabsel]
 
-  let p.tabline.right = copy(p.normal.right)
+  let p.tabline.right = [
+        \ col_edge,
+        \ col_edge_rev]
 
   return p
 endfunction

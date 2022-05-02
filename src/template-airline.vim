@@ -5,8 +5,8 @@ set cpo&vim
 function! s:build_palette() abort
   let col_base     = {{light_col_base}}
   let col_edge     = {{light_col_edge}}
+  let col_edge_rev = {{light_col_edge_rev}}
   let col_error    = {{light_col_error}}
-  let col_gradient = {{light_col_gradient}}
   let col_nc       = {{light_col_nc}}
   let col_warning  = {{light_col_warning}}
   let col_insert   = {{light_col_insert}}
@@ -16,28 +16,28 @@ function! s:build_palette() abort
 
   let p = {}
   let p.inactive = airline#themes#generate_color_map(
-        \ col_nc,
-        \ col_nc,
-        \ col_nc)
+        \ col_base,
+        \ col_base,
+        \ col_base)
   let p.normal = airline#themes#generate_color_map(
+        \ col_edge_rev,
         \ col_edge,
-        \ col_gradient,
         \ col_base)
   let p.insert = airline#themes#generate_color_map(
         \ col_insert,
-        \ col_gradient,
+        \ col_edge,
         \ col_base)
   let p.replace = airline#themes#generate_color_map(
         \ col_replace,
-        \ col_gradient,
+        \ col_edge,
         \ col_base)
   let p.visual = airline#themes#generate_color_map(
         \ col_visual,
-        \ col_gradient,
+        \ col_edge,
         \ col_base)
   let p.terminal = airline#themes#generate_color_map(
         \ col_insert,
-        \ col_gradient,
+        \ col_edge,
         \ col_base)
 
   " Accents

@@ -13,9 +13,10 @@ function! s:build_palette() abort
 
   let col_base     = ['#e4e4e4', '#1c1c1c', 254, 234]
   let col_edge     = ['#eeeeee', '#0000ff', 255, 21]
-  let col_gradient = ['#eeeeee', '#0000ff', 255, 21]
+  let col_edge_rev = ['#0000ff', '#eeeeee', 21, 255]
+  let col_navy     = ['#e4e4e4', '#005faf', 254, 25]
   let col_nc       = ['#0000ff', '#eeeeee', 21, 255]
-  let col_tabfill  = ['#eeeeee', '#1c1c1c', 255, 234]
+  let col_tabfill  = ['#e4e4e4', '#1c1c1c', 254, 234]
   let col_normal   = ['#0000ff', '#eeeeee', 21, 255]
   let col_error    = ['#0000ff', '#eeeeee', 21, 255]
   let col_warning  = ['#eeeeee', '#d75f00', 255, 166]
@@ -28,10 +29,10 @@ function! s:build_palette() abort
         \ col_base]
   let p.normal.left = [
         \ col_normal,
-        \ col_gradient]
+        \ col_edge]
   let p.normal.right = [
-        \ col_edge,
-        \ col_gradient]
+        \ col_edge_rev,
+        \ col_edge]
   let p.normal.error = [
         \ col_error]
   let p.normal.warning = [
@@ -39,13 +40,13 @@ function! s:build_palette() abort
 
   let p.insert.left = [
         \ col_insert,
-        \ col_gradient]
+        \ col_edge]
   let p.replace.left = [
         \ col_replace,
-        \ col_gradient]
+        \ col_edge]
   let p.visual.left = [
         \ col_visual,
-        \ col_gradient]
+        \ col_edge]
 
   let p.inactive.middle = [
         \ col_nc]
@@ -59,11 +60,13 @@ function! s:build_palette() abort
   let p.tabline.middle = [
         \ col_tabfill]
   let p.tabline.left = [
-        \ col_tabfill]
+        \ col_navy]
   let p.tabline.tabsel = [
         \ col_tabsel]
 
-  let p.tabline.right = copy(p.normal.right)
+  let p.tabline.right = [
+        \ col_edge,
+        \ col_edge_rev]
 
   return p
 endfunction
