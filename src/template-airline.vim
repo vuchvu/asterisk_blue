@@ -3,16 +3,29 @@ set cpo&vim
 
 
 function! s:build_palette() abort
-  let col_base     = {{light_col_base}}
-  let col_edge     = {{light_col_edge}}
-  let col_edge_rev = {{light_col_edge_rev}}
-  let col_error    = {{light_col_error}}
-  let col_nc       = {{light_col_nc}}
-  let col_warning  = {{light_col_warning}}
-  let col_insert   = {{light_col_insert}}
-  let col_replace  = {{light_col_replace}}
-  let col_visual   = {{light_col_visual}}
-  let col_red      = {{light_col_red}}
+  if &background == 'light'
+    let col_base     = {{light_col_base}}
+    let col_edge     = {{light_col_edge}}
+    let col_edge_rev = {{light_col_edge_rev}}
+    let col_error    = {{light_col_error}}
+    let col_nc       = {{light_col_nc}}
+    let col_warning  = {{light_col_warning}}
+    let col_insert   = {{light_col_insert}}
+    let col_replace  = {{light_col_replace}}
+    let col_visual   = {{light_col_visual}}
+    let col_red      = {{light_col_red}}
+  else
+    let col_base     = {{dark_col_base}}
+    let col_edge     = {{dark_col_edge}}
+    let col_edge_rev = {{dark_col_edge_rev}}
+    let col_error    = {{dark_col_error}}
+    let col_nc       = {{dark_col_nc}}
+    let col_warning  = {{dark_col_warning}}
+    let col_insert   = {{dark_col_insert}}
+    let col_replace  = {{dark_col_replace}}
+    let col_visual   = {{dark_col_visual}}
+    let col_red      = {{dark_col_red}}
+  endif
 
   let p = {}
   let p.inactive = airline#themes#generate_color_map(

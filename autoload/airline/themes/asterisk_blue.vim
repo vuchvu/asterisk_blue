@@ -3,16 +3,29 @@ set cpo&vim
 
 
 function! s:build_palette() abort
-  let col_base     = ['#e4e4e4', '#1c1c1c', 254, 234]
-  let col_edge     = ['#eeeeee', '#0000ff', 255, 21]
-  let col_edge_rev = ['#0000ff', '#eeeeee', 21, 255]
-  let col_error    = ['#0000ff', '#eeeeee', 21, 255]
-  let col_nc       = ['#0000ff', '#eeeeee', 21, 255]
-  let col_warning  = ['#eeeeee', '#d75f00', 255, 166]
-  let col_insert   = ['#0000ff', '#eeeeee', 21, 255]
-  let col_replace  = ['#eeeeee', '#ff5fd7', 255, 206]
-  let col_visual   = ['#eeeeee', '#d75f00', 255, 166]
-  let col_red      = ['#d75f00', '#eeeeee', 166, 255]
+  if &background == 'light'
+    let col_base     = ['#eeeeee', '#1c1c1c', 255, 234]
+    let col_edge     = ['#eeeeee', '#0000ff', 255, 21]
+    let col_edge_rev = ['#0000ff', '#eeeeee', 21, 255]
+    let col_error    = ['#0000ff', '#eeeeee', 21, 255]
+    let col_nc       = ['#0000ff', '#eeeeee', 21, 255]
+    let col_warning  = ['#eeeeee', '#d75f00', 255, 166]
+    let col_insert   = ['#0000ff', '#eeeeee', 21, 255]
+    let col_replace  = ['#eeeeee', '#ff5fd7', 255, 206]
+    let col_visual   = ['#eeeeee', '#d75f00', 255, 166]
+    let col_red      = ['#d75f00', '#eeeeee', 166, 255]
+  else
+    let col_base     = ['#dadada', '#262626', 253, 17]
+    let col_edge     = ['#dadada', '#0000ff', 253, 21]
+    let col_edge_rev = ['#0000ff', '#a8a8a8', 21, 248]
+    let col_error    = ['#0000ff', '#a8a8a8', 21, 248]
+    let col_nc       = ['#0000ff', '#a8a8a8', 21, 248]
+    let col_warning  = ['#dadada', '#d75f00', 253, 178]
+    let col_insert   = ['#0000ff', '#a8a8a8', 21, 248]
+    let col_replace  = ['#dadada', '#d787af', 253, 132]
+    let col_visual   = ['#dadada', '#d75f00', 253, 178]
+    let col_red      = ['#d75f00', '#dadada', 178, 253]
+  endif
 
   let p = {}
   let p.inactive = airline#themes#generate_color_map(

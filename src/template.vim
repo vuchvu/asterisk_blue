@@ -15,12 +15,22 @@ endif
 
 let g:colors_name = 'asterisk_blue'
 
-{{ light_rules }}
+if &background == 'light'
+  {{ light_rules }}
 
-if has('nvim')
-  {{ light_neovim_term_defs }}
+  if has('nvim')
+    {{ light_neovim_term_defs }}
+  else
+    {{ light_vim_term_defs }}
+  endif
 else
-  {{ light_vim_term_defs }}
+  {{ dark_rules }}
+
+  if has('nvim')
+    {{ dark_neovim_term_defs }}
+  else
+    {{ dark_vim_term_defs }}
+  endif
 endif
 
 {{ links }}

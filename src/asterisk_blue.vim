@@ -13,10 +13,10 @@ function! s:create_colors(palette) abort
   " Rules {{{
   call extend(rules, pgmnt#hi#group(
         \ 'Normal', {
-        \   'ctermbg': c.white,
-        \   'ctermfg': c.black,
-        \   'guibg': g.white,
-        \   'guifg': g.black,
+        \   'ctermbg': c.normal_bg,
+        \   'ctermfg': c.normal_fg,
+        \   'guibg': g.normal_bg,
+        \   'guifg': g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Boolean', {
@@ -26,15 +26,15 @@ function! s:create_colors(palette) abort
   call extend(rules, pgmnt#hi#group(
         \ ['ColorColumn', 'CursorColumn', 'CursorLine'], {
         \   'cterm': 'NONE',
-        \   'ctermbg': c.lightgray,
+        \   'ctermbg': c.cursorline_bg,
         \   'ctermfg': 'NONE',
-        \   'guibg': g.lightgray,
+        \   'guibg': g.cursorline_bg,
         \   'guifg': 'NONE',
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Comment', {
-        \   'ctermfg': c.darkgray,
-        \   'guifg': g.darkgray,
+        \   'ctermfg': c.comment_fg,
+        \   'guifg': g.comment_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Conceal', {
@@ -57,23 +57,23 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['Cursor', 'lCursor', 'CursorIM'], {
-        \   'ctermbg': c.gray,
-        \   'ctermfg': c.blue,
-        \   'guibg': g.gray,
-        \   'guifg': g.blue,
+        \   'ctermbg': c.cursor_bg,
+        \   'ctermfg': c.cursor_fg,
+        \   'guibg': g.cursor_bg,
+        \   'guifg': g.cursor_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'CursorLineNr', {
         \   'cterm': 'NONE',
-        \   'ctermbg': c.lightgray,
+        \   'ctermbg': c.cursorline_bg,
         \   'ctermfg': c.yellow,
-        \   'guibg': g.lightgray,
+        \   'guibg': g.cursorline_bg,
         \   'guifg': g.yellow,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Delimiter', {
-        \   'ctermfg': c.black,
-        \   'guifg': g.black,
+        \   'ctermfg': c.normal_fg,
+        \   'guifg': g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'DiffAdd', {
@@ -118,9 +118,9 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['Error', 'ErrorMsg', 'WarningMsg'], {
-        \   'ctermbg': c.white,
+        \   'ctermbg': c.normal_bg,
         \   'ctermfg': c.pink,
-        \   'guibg': g.white,
+        \   'guibg': g.normal_bg,
         \   'guifg': g.pink,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -156,9 +156,9 @@ function! s:create_colors(palette) abort
   call extend(rules, pgmnt#hi#group(
         \ 'Ignore', {
         \   'ctermbg': 'NONE',
-        \   'ctermfg': c.gray,
+        \   'ctermfg': c.comment_fg,
         \   'guibg': 'NONE',
-        \   'guifg': g.gray,
+        \   'guifg': g.comment_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Include', {
@@ -167,9 +167,9 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'IncSearch', {
-        \   'ctermbg': c.white,
+        \   'ctermbg': c.normal_bg,
         \   'ctermfg': c.navy,
-        \   'guibg': g.white,
+        \   'guibg': g.normal_bg,
         \   'guifg': g.navy,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -179,15 +179,15 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'label', {
-        \   'ctermfg': c.darkgray,
-        \   'guifg': g.darkgray,
+        \   'ctermfg': c.comment_fg,
+        \   'guifg': g.comment_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'LineNr', {
         \   'cterm': 'NONE',
-        \   'ctermbg': c.white,
+        \   'ctermbg': c.normal_bg,
         \   'ctermfg': c.yellow,
-        \   'guibg': g.white,
+        \   'guibg': g.normal_bg,
         \   'guifg': g.yellow,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -209,8 +209,8 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['NonText', 'Whitespace'], {
-        \   'ctermfg': c.gray,
-        \   'guifg': g.gray,
+        \   'ctermfg': c.whitespace_fg,
+        \   'guifg': g.whitespace_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Number', {
@@ -219,8 +219,8 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Operator', {
-        \   'ctermfg': c.black,
-        \   'guifg': g.black,
+        \   'ctermfg': c.normal_fg,
+        \   'guifg': g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Pmenu', {
@@ -267,9 +267,9 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'QuickFixLine', {
-        \   'ctermbg': c.lightgray,
+        \   'ctermbg': c.cursorline_bg,
         \   'ctermfg': c.blue,
-        \   'guibg': g.lightgray,
+        \   'guibg': g.cursorline_bg,
         \   'guifg': g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -293,13 +293,13 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Special', {
-        \   'ctermfg': c.black,
-        \   'guifg': g.black,
+        \   'ctermfg': c.normal_fg,
+        \   'guifg': g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'SpecialChar', {
-        \   'ctermfg': c.gray,
-        \   'guifg': g.gray,
+        \   'ctermfg': c.specialChar_fg,
+        \   'guifg': g.specialChar_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'SpecialKey', {
@@ -314,23 +314,23 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'SpellCap', {
-        \   'ctermfg': c.black,
+        \   'ctermfg': c.normal_fg,
         \   'gui': 'undercurl',
-        \   'guifg': g.black,
+        \   'guifg': g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'SpellLocal', {
         \   'ctermbg': 'NONE',
-        \   'ctermfg': c.black,
+        \   'ctermfg': c.normal_fg,
         \   'gui': 'undercurl',
         \   'guifg': 'NONE',
-        \   'guisp': g.black,
+        \   'guisp': g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'SpellRare', {
-        \   'ctermfg': c.black,
+        \   'ctermfg': c.normal_fg,
         \   'gui': 'undercurl',
-        \   'guifg': g.black,
+        \   'guifg': g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Statement', {
@@ -350,9 +350,9 @@ function! s:create_colors(palette) abort
   call extend(rules, pgmnt#hi#group(
         \ ['StatusLineNC', 'StatusLineTermNC'], {
         \   'ctermbg': c.navy,
-        \   'ctermfg': c.lightgray,
+        \   'ctermfg': c.cursorline_bg,
         \   'guibg': g.navy,
-        \   'guifg': g.lightgray,
+        \   'guifg': g.cursorline_bg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'StorageClass', {
@@ -399,9 +399,9 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'TermCursorNC', {
-        \   'ctermbg': c.lightgray,
+        \   'ctermbg': c.cursorline_bg,
         \   'ctermfg': c.white,
-        \   'guibg': g.lightgray,
+        \   'guibg': g.cursorline_bg,
         \   'guifg': g.white,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -433,9 +433,9 @@ function! s:create_colors(palette) abort
   call extend(rules, pgmnt#hi#group(
         \ 'Underlined', {
         \   'cterm': 'underline',
-        \   'ctermfg': c.black,
+        \   'ctermfg': c.normal_fg,
         \   'gui': 'underline',
-        \   'guifg': g.black,
+        \   'guifg': g.normal_fg,
         \   'term': 'underline',
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -449,9 +449,9 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Visual', {
-        \   'ctermbg': c.lightgray,
+        \   'ctermbg': c.visual_bg,
         \   'ctermfg': 'NONE',
-        \   'guibg': g.lightgray,
+        \   'guibg': g.visual_bg,
         \   'guifg': 'NONE',
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -463,9 +463,9 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'WildMenu', {
-        \   'ctermbg': c.white,
+        \   'ctermbg': c.normal_bg,
         \   'ctermfg': c.gray,
-        \   'guibg': g.white,
+        \   'guibg': g.normal_bg,
         \   'guifg': g.gray,
         \ }))
   " }}}
@@ -789,12 +789,17 @@ function! s:create_links() abort
 endfunction
 
 function! s:create_context() abort
+  let d = s:create_colors(
+       \ asterisk_blue#palette#dark#create())
   let l = s:create_colors(
         \ asterisk_blue#palette#light#create())
   let links = s:create_links()
 
   return {
         \   'modified': strftime('%Y-%m-%d %H:%M'),
+        \   'dark_rules': d.rules,
+        \   'dark_neovim_term_defs': d.neovim_term_defs,
+        \   'dark_vim_term_defs': d.vim_term_defs,
         \   'light_rules': l.rules,
         \   'light_neovim_term_defs': l.neovim_term_defs,
         \   'light_vim_term_defs': l.vim_term_defs,
@@ -810,6 +815,7 @@ call pgmnt#compile(s:create_context(), {
 function! s:create_xline_context() abort
   let ps = {
         \   'light': asterisk_blue#palette#light#create(),
+        \   'dark': asterisk_blue#palette#dark#create(),
         \ }
   let context = {}
   for [bg, p] in items(ps)
@@ -817,22 +823,22 @@ function! s:create_xline_context() abort
     let g = p.gui
 
     let col_base = string([
-          \   g.lightgray,
-          \   g.black,
-          \   c.lightgray,
-          \   c.black,
+          \   g.xline_col_base_fg,
+          \   g.xline_col_base_bg,
+          \   c.xline_col_base_fg,
+          \   c.xline_col_base_bg,
           \ ])
     let col_edge = string([
           \   g.white,
-          \   g.blue,
+          \   g.xline_col_edge_fg,
           \   c.white,
-          \   c.blue,
+          \   c.xline_col_edge_fg,
           \ ])
     let col_edge_rev = string([
-          \   g.blue,
-          \   g.white,
-          \   c.blue,
-          \   c.white,
+          \   g.xline_col_edge_fg,
+          \   g.xline_col_edge_bg,
+          \   c.xline_col_edge_fg,
+          \   c.xline_col_edge_bg,
           \ ])
     let col_navy = string([
           \   g.lightgray,

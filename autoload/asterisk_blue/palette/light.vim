@@ -16,6 +16,23 @@ function! asterisk_blue#palette#light#create() abort
   let g.lightgray = pgmnt#color#rgb(228, 228, 228)
   let g.white     = pgmnt#color#rgb(238, 238, 238)
 
+  let g.normal_bg = g.white
+  let g.normal_fg = g.black
+  let g.cursor_bg = g.gray
+  let g.cursor_fg = g.blue
+
+  let g.comment_fg = g.darkgray
+  let g.specialChar_fg = g.gray
+  let g.whitespace_fg = g.gray
+
+  let g.visual_bg = g.lightgray
+  let g.cursorline_bg = g.lightgray
+
+  let g.xline_col_base_bg = g.normal_fg
+  let g.xline_col_base_fg = g.normal_bg
+  let g.xline_col_edge_bg = g.white
+  let g.xline_col_edge_fg = g.blue
+
   " ansi colors
   let g.red = pgmnt#color#rgb( 87,   0,   0)
   let g.term_colors = [
@@ -58,6 +75,23 @@ function! asterisk_blue#palette#light#create() abort
   let c.lightgray = 254
   let c.white = 255
   let c.red = 88
+
+  let c.normal_bg = c.white
+  let c.normal_fg = c.black
+  let c.cursor_bg = c.gray
+  let c.cursor_fg = c.blue
+
+  let c.comment_fg = c.darkgray
+  let c.specialChar_fg = c.gray
+  let c.whitespace_fg = c.gray
+
+  let c.visual_bg = c.lightgray
+  let c.cursorline_bg = c.lightgray
+
+  let c.xline_col_base_bg = c.normal_fg
+  let c.xline_col_base_fg = c.normal_bg
+  let c.xline_col_edge_bg = c.white
+  let c.xline_col_edge_fg = c.blue
 
   " plugins
   let c.easymotion_shade_fg = 250
