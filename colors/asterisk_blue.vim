@@ -1,6 +1,6 @@
 " File:       asterisk_blue.vim
 " Maintainer: vuchvu <akisamegane7100@gmail.com>
-" Modified:   2022-05-04 15:53
+" Modified:   2022-05-28 09:13
 " License:    MIT
 
 
@@ -52,7 +52,7 @@ if &background == 'light'
   hi Keyword ctermfg=166 guifg=#d75f00
   hi label ctermfg=246 guifg=#949494
   hi LineNr cterm=NONE ctermbg=255 ctermfg=100 guibg=#eeeeee guifg=#878700
-  hi MatchParen ctermbg=250 ctermfg=25 guibg=#b4b4b4 guifg=#005faf
+  hi MatchParen ctermbg=45 ctermfg=254 guibg=#00d7ff guifg=#e4e4e4
   hi ModeMsg ctermfg=21 guifg=#0000ff
   hi MoreMsg ctermfg=70 guifg=#5aaf00
   hi NonText ctermfg=250 guifg=#b4b4b4
@@ -179,7 +179,7 @@ else
   hi Keyword ctermfg=178 guifg=#d75f00
   hi label ctermfg=248 guifg=#a8a8a8
   hi LineNr cterm=NONE ctermbg=17 ctermfg=136 guibg=#00005f guifg=#878700
-  hi MatchParen ctermbg=24 ctermfg=25 guibg=#005f87 guifg=#005faf
+  hi MatchParen ctermbg=87 ctermfg=248 guibg=#00ffff guifg=#a8a8a8
   hi ModeMsg ctermfg=21 guifg=#0000ff
   hi MoreMsg ctermfg=70 guifg=#878700
   hi NonText ctermfg=24 guifg=#005f87

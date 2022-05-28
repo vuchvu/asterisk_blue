@@ -192,10 +192,10 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'MatchParen', {
-        \   'ctermbg': c.gray,
-        \   'ctermfg': c.navy,
-        \   'guibg': g.gray,
-        \   'guifg': g.navy,
+        \   'ctermbg': c.cyan,
+        \   'ctermfg': c.lightgray,
+        \   'guibg': g.cyan,
+        \   'guifg': g.lightgray,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'ModeMsg', {
