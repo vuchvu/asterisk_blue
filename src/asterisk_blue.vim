@@ -398,6 +398,13 @@ function! s:create_colors(palette) abort
         \   'guifg': g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
+        \ 'Terminal', {
+        \   'ctermbg': c.navy,
+        \   'ctermfg': c.white,
+        \   'guibg': g.navy,
+        \   'guifg': g.white,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
         \ 'TermCursorNC', {
         \   'ctermbg': c.cursorline_bg,
         \   'ctermfg': c.white,
@@ -796,7 +803,7 @@ function! s:create_context() abort
   let links = s:create_links()
 
   return {
-        \   'modified': strftime('%Y-%m-%d %H:%M'),
+        \   'modified': strftime('%Y-%m-%d %H:%M(+0900)'),
         \   'dark_rules': d.rules,
         \   'dark_neovim_term_defs': d.neovim_term_defs,
         \   'dark_vim_term_defs': d.vim_term_defs,

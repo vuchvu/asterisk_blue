@@ -1,6 +1,6 @@
 " File:       asterisk_blue.vim
 " Maintainer: vuchvu <akisamegane7100@gmail.com>
-" Modified:   2022-05-28 09:13
+" Modified:   2023-04-30 07:44(+0900)
 " License:    MIT
 
 
@@ -91,6 +91,7 @@ if &background == 'light'
   hi TabLineFill ctermbg=234 ctermfg=234 guibg=#1c1c1c guifg=#1c1c1c
   hi TabLineSel cterm=NONE ctermbg=21 ctermfg=255 gui=NONE guibg=#0000ff guifg=#eeeeee
   hi Tag ctermfg=21 guifg=#0000ff
+  hi Terminal ctermbg=25 ctermfg=255 guibg=#005faf guifg=#eeeeee
   hi TermCursorNC ctermbg=254 ctermfg=255 guibg=#e4e4e4 guifg=#eeeeee
   hi Title ctermfg=21 gui=NONE guifg=#0000ff
   hi Todo cterm=bold ctermbg=21 ctermfg=255 gui=bold guibg=#0000ff guifg=#eeeeee
@@ -218,6 +219,7 @@ else
   hi TabLineFill ctermbg=17 ctermfg=17 guibg=#00005f guifg=#00005f
   hi TabLineSel cterm=NONE ctermbg=21 ctermfg=253 gui=NONE guibg=#0000ff guifg=#dadada
   hi Tag ctermfg=21 guifg=#0000ff
+  hi Terminal ctermbg=25 ctermfg=253 guibg=#005faf guifg=#dadada
   hi TermCursorNC ctermbg=18 ctermfg=253 guibg=#000087 guifg=#dadada
   hi Title ctermfg=21 gui=NONE guifg=#0000ff
   hi Todo cterm=bold ctermbg=21 ctermfg=253 gui=bold guibg=#0000ff guifg=#dadada
